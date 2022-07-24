@@ -1,0 +1,46 @@
+$color_1: black;
+$color_2: whitesmoke;
+$background-color_1: royalblue;
+
+.botonera {
+	img {
+		width: 70px;
+	}
+}
+.navbar {
+	.navbar-nav {
+		.nav-link {
+			&:hover {
+				color: $color_1;
+				font-weight: 600;
+			}
+			color: $color_2;
+			font-size: 1.5rem;
+			margin-right: 60px;
+		}
+	}
+}
+.bg-blue {
+	background-color: $background-color_1;
+}
+.bg-pattern {
+	background-image: url(../img/index/pattern.jpg);
+	background-attachment: fixed;
+}
+
+$background-color_1: rgba(0, 0, 0, 0.6);
+
+header {
+	overflow-x: hidden;
+	background-color: $background-color_1;
+}
+
+.navbar-light .navbar-toggler-icon{
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-light .navbar-toggler {
+    color: rgba(0,0,0,.55);
+    border-color: rgba(0,0,0,.3);
+	border-radius: 5px;
+}

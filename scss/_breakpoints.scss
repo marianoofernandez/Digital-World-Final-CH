@@ -1,0 +1,265 @@
+$color_1: whitesmoke;
+$background-color_1: rgba(0, 0, 0, 0.8);
+$background-color_2: rgba(78, 76, 198, 0.8);
+$background-color_3: rgba(0, 0, 0, 0.4);
+
+.c-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+	grid-template-areas: "nav" "header" "main" "contacto" "footer";
+}
+.botonera {
+	grid-area: nav;
+	grid-area: nav;
+}
+.populares {
+	grid-area: header;
+}
+.destacados {
+	grid-area: main;
+}
+.contacto {
+	grid-area: contacto;
+}
+.footer {
+	grid-area: footer;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-size: 1.5rem;
+	grid-area: footer;
+    h4{
+        color: $color_1;
+        font-size: 1rem;
+    }
+}
+.pie_icon--sm {
+	width: 60px;
+	width: 60px;
+}
+.pie_icon--sm2 {
+	width: 80%;
+	width: 80%;
+}
+.metododepago-footerdark{
+	display: flex;
+	justify-content: center;
+}
+.c-grid2 {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+	grid-template-areas: "nav" "header" "main" "footer";
+}
+.selecciones-mensuales {
+	grid-area: header;
+}
+#todaslascategorias {
+	grid-area: main;
+}
+@media (min-width: 280px) {
+	.pie_icon--sm3 {
+		width: 100%;
+	}
+}
+@media (min-width: 596px) {
+	.c-grid {
+		grid-template-columns: 20vw 80vw;
+		grid-template-rows: repeat(5, auto);
+		grid-template-areas: "nav nav" "header header" "main main" "contacto contacto" "footer footer";
+	}
+	
+	.contacto {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-evenly;
+	}
+
+	iframe{
+		width: 400px;
+		height: 350px;
+	}
+}
+@media (min-width: 1024px) {
+	.c-grid {
+		grid-template-columns: 30vw 70vw;
+		grid-template-rows: repeat(5, auto);
+		grid-template-areas: "nav nav" "header header" "main main" "contacto contacto" "footer footer";
+	}
+	.contacto {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-evenly;
+	}
+	#todoslosjuegos {
+		.juegos {
+			figure {
+				display: flex;
+				justify-content: space-evenly;
+				width: auto;
+				figcaption {
+					font-size: 1.5rem;
+					color: $color_1;
+					padding: 10px 0px;
+					background-color: $background-color_1;
+					margin-top: 5px;
+				}
+			}
+			p.price {
+				color: $color_1;
+				padding-bottom: 5px;
+				background-color: $background-color_2;
+				font-size: 1.5rem;
+			}
+		}
+		.lo-mas-jugado {
+			img {
+				width: auto;
+			}
+			article {
+				background-color: $background-color_3;
+				display: flex;
+				align-items: center;
+				flex-direction: row;
+                p {
+                    font-size: 1.0rem;
+                    line-height: 2rem;
+                    margin: 20px auto;
+                    color: $color_1;
+                    text-align: center;
+                }
+			}
+		}
+        .btnXl {
+            width: 50%;
+            height: 35px;
+            color: $color_1;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: auto;
+            font-size: 1.0rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &:hover {
+                color: lightskyblue;
+                font-weight: 600;
+            }
+        }
+	}
+}
+
+@media (min-width: 992px) {
+	.c-grid {
+		grid-template-columns: 20vw 80vw;
+		grid-template-rows: repeat(4, auto);
+		grid-template-areas: "nav nav" "header header" "main main" "footer footer";
+	}
+	#todaslascategorias {
+		.categorias {
+			margin: auto;
+			padding: 10px;
+			display: flex;
+			justify-content: space-evenly;
+			flex-direction: row;
+			align-items: center;
+			width: auto;
+		}
+	}
+	.contacto{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+	}
+}
+@media (min-width: 768px) {
+	.c-grid {
+		grid-template-columns: 20vw 80vw;
+		grid-template-rows: repeat(4, auto);
+		grid-template-areas: "nav nav" "header header" "main main" "footer footer";
+	}
+	.pie_icon--sm3 {
+		width: 40%;
+	}
+	iframe{
+		width: 400px;
+		height: 350px;
+	}
+	#todoslosjuegos {
+		.juegos {
+			margin: auto;
+			padding: 10px;
+			display: flex;
+			justify-content: space-evenly;
+			flex-direction: row;
+			align-items: center;
+            figure {
+				display: flex;
+				justify-content: space-evenly;
+				width: auto;
+				figcaption {
+					font-size: 1.5rem;
+					color: $color_1;
+					padding: 10px 0px;
+					background-color: $background-color_1;
+					margin-top: 5px;
+				}
+			}
+			p.price {
+				color: $color_1;
+				padding-bottom: 5px;
+				background-color: $background-color_2;
+				font-size: 1.5rem;
+			}
+		}
+	}
+	#nosotros {
+		.proximos {
+			margin: auto;
+			padding: 10px;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-evenly;
+			figure {
+				img {
+					border-top-left-radius: 5px;
+					border-top-right-radius: 5px;
+					border-bottom-right-radius: 5px;
+					border-bottom-left-radius: 5px;
+					width: 100%;
+				}
+			}
+		}
+	}
+	
+	.c-grid2 {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+		grid-template-areas: "nav" "header" "main" "footer";
+	}
+	.botonera {
+		grid-area: nav;
+	}
+	.populares {
+		grid-area: header;
+	}
+	#contacto {
+		grid-area: main;
+	}
+	.footer {
+		grid-area: footer;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		font-size: 1.5rem;
+	}
+}

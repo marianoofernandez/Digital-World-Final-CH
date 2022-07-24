@@ -1,0 +1,65 @@
+$font-family_1: 'Josefin Sans', sans-serif;
+
+$light-grey: #e0e2f4;
+$grey: #aaaaaa;
+$blue: #0414a7;
+
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+a { color: $light-grey; }
+
+.logo-error{
+    width: 120px;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+body,
+p {  font-family: $font-family_1; }
+h1 { font-family: $font-family_1; }
+h2 { font-family: $font-family_1; }
+h3 { font-family: $font-family_1; }
+h4 { font-family: $font-family_1; }
+
+body { background: $blue; }
+
+.caja {
+  width: 90%;
+  margin: auto;
+  max-width: 640px;
+}
+
+.bsod {
+  padding-top: 10%;
+  
+  .neg {
+    text-align: center;
+    color: $blue;
+    
+    .bg {
+      background: $grey;
+      padding: 0 15px 2px 13px;
+    }
+  }
+  .title { margin-bottom: 50px; }
+  .nav {
+    margin-top: 35px;
+    text-align: center;
+    
+    .link {
+      text-decoration: none;
+      padding: 0 9px 2px 8px;
+      
+      &:hover,
+      &:focus {
+        background: $grey;
+        color: $blue;
+      }
+    }
+  }
+}

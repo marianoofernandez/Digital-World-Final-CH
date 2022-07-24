@@ -1,0 +1,58 @@
+//mixins
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+@mixin breakpoint($size) {
+  @if map-has-key($breakpoints, $size) {
+    @media (min-width: #{map-get($breakpoints, $size)}) {
+            @content;
+        }
+    }
+}
+
+p{
+  @include breakpoint (xl){
+    font-size: 1.0rem;
+  }
+}
+
+@mixin texto ($size, $line-height, $color) {
+    font-size: $size;
+    line-height: $line-height;
+    color: $color;
+    padding: 4px;
+}
+
+h2{
+    @include texto(2em,2.4em,whitesmoke)
+}
+
+//extends
+
+.btnXl {
+    width: 50%;
+    height: 35px;
+    background-color: black;
+    color: whitesmoke;
+    text-align: center;
+    text-decoration: none;
+    margin: auto;
+    font-size: 1.0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .btnXl:hover {
+      color: lightskyblue;
+      font-weight: 600; }
+
+
+
+.btn-rounded{
+    @extend .btnXl;
+    border-radius: 5px;
+}
